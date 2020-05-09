@@ -1,4 +1,4 @@
-package com.lc.bootcamp;
+package com.lc.bootcamp.array;
 
 /**
  * 给定两个数组，编写一个函数来计算它们的交集。

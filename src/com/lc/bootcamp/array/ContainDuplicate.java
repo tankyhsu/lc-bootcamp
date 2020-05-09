@@ -1,4 +1,4 @@
-package com.lc.bootcamp;
+package com.lc.bootcamp.array;
 
 import java.util.HashSet;
 import java.util.Set;
