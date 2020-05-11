@@ -1,14 +1,19 @@
 package com.lc.bootcamp;
 
+import com.lc.bootcamp.string.FindUniqueChar;
+
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        int[] nums = {9,8,7,6,5,4,3,2,1,0};
+        int[] nums = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
         plusOne(nums);
         System.out.println(Arrays.toString(nums));
+
+        String string = "ccc";
+        int result = FindUniqueChar.firstUniqChar(string);
     }
 
     public static int[] plusOne(int[] digits) {
