@@ -1,6 +1,7 @@
 package com.lc.bootcamp;
 
 import com.lc.bootcamp.string.FindUniqueChar;
+import com.lc.bootcamp.string.Palindrome;
 
 import java.util.Arrays;
 
@@ -12,8 +13,8 @@ public class Main {
         plusOne(nums);
         System.out.println(Arrays.toString(nums));
 
-        String string = "ccc";
-        int result = FindUniqueChar.firstUniqChar(string);
+        String string = "race a car";
+        boolean result = Palindrome.isPalindrome(string);
     }
 
     public static int[] plusOne(int[] digits) {
