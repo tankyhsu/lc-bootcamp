@@ -1,5 +1,6 @@
 package com.lc.bootcamp;
 
+import com.lc.bootcamp.string.CountAndSay;
 import com.lc.bootcamp.string.FindUniqueChar;
 import com.lc.bootcamp.string.Palindrome;
 
@@ -15,6 +16,8 @@ public class Main {
 
         String string = "race a car";
         boolean result = Palindrome.isPalindrome(string);
+
+        System.out.println(CountAndSay.countAndSay(4));
     }
 
     public static int[] plusOne(int[] digits) {
