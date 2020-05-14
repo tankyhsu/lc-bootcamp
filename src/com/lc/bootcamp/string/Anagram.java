@@ -39,6 +39,7 @@ public class Anagram {
                 return false;
             }
         }
+        // for循环中对boolean赋值，使用原子型
         AtomicBoolean isAnagram = new AtomicBoolean(true);
         result.forEach((character, integer) -> {
             if (integer != 0) {

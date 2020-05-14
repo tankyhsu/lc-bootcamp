@@ -54,4 +54,18 @@ public class CountAndSay {
         desc.append(count).append(item);
         return desc.toString();
     }
+
+    /**
+     * 递归调用实现
+     *
+     * @param n
+     * @return
+     */
+    public static String countAndSay2(int n) {
+        if (n == 1) {
+            return "1";
+        } else {
+            return describe(countAndSay2(n - 1));
+        }
+    }
 }
