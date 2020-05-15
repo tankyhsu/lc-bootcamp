@@ -1,8 +1,6 @@
 package com.lc.bootcamp;
 
-import com.lc.bootcamp.string.CountAndSay;
-import com.lc.bootcamp.string.FindUniqueChar;
-import com.lc.bootcamp.string.Palindrome;
+import com.lc.bootcamp.string.*;
 
 import java.util.Arrays;
 
@@ -18,6 +16,9 @@ public class Main {
         boolean result = Palindrome.isPalindrome(string);
 
         System.out.println(CountAndSay.countAndSay(4));
+
+        System.out.println(Atoi.myAtoi("-5-"));
+        System.out.println(Reverse.reverse(-2147483648));
     }
 
     public static int[] plusOne(int[] digits) {
