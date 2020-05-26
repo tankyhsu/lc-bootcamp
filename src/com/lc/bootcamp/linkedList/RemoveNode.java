@@ -28,11 +28,8 @@ package com.lc.bootcamp.linkedList;
 public class RemoveNode {
 
     public void deleteNode(ListNode node) {
-        ListNode cursor = node;
-//        while(cursor.next!=null){
-//            if(cursor.val)
-//            cursor = cursor.next;
-//        }
+        node.val = node.next.val;
+        node.next = node.next.next;
     }
 
 }
