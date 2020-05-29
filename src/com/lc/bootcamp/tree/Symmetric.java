@@ -29,46 +29,49 @@ import java.util.List;
  * 2020/5/27
  */
 public class Symmetric {
-    static List<Integer> leftList = new LinkedList<>();
-    static List<Integer> rightList = new LinkedList<>();
 
     public static boolean isSymmetric(TreeNode root) {
+        List<Integer> leftList = new LinkedList<>();
+        List<Integer> rightList = new LinkedList<>();
+
         if (root == null) {
             return true;
         } else {
-            leftFirst(root.left);
-            rightFirst(root.right);
+            leftFirst(root.left, leftList);
+            rightFirst(root.right, rightList);
         }
+        System.out.println(leftList);
+        System.out.println(rightList);
         return leftList.equals(rightList);
     }
 
-    private static void leftFirst(TreeNode root) {
+    private static void leftFirst(TreeNode root, List<Integer> leftList) {
         if (root != null) {
             leftList.add(root.val);
             if (root.left != null) {
-                leftFirst(root.left);
-            }else{
+                leftFirst(root.left, leftList);
+            } else {
                 leftList.add(null);
             }
             if (root.right != null) {
-                leftFirst(root.right);
-            }else{
+                leftFirst(root.right, leftList);
+            } else {
                 leftList.add(null);
             }
         }
     }
 
-    private static void rightFirst(TreeNode root) {
+    private static void rightFirst(TreeNode root, List<Integer> rightList) {
         if (root != null) {
             rightList.add(root.val);
             if (root.right != null) {
-                rightFirst(root.right);
-            }else{
+                rightFirst(root.right, rightList);
+            } else {
                 rightList.add(null);
             }
             if (root.left != null) {
-                rightFirst(root.left);
-            }else{
+                rightFirst(root.left, rightList);
+            } else {
                 rightList.add(null);
             }
         }
@@ -77,14 +80,12 @@ public class Symmetric {
     public static void main(String[] args) {
         // [1,2,2,3,4,4,3]
         TreeNode root = new TreeNode(1);
-//        root.left = new TreeNode(2);
-//        root.right = new TreeNode(2);
-//        root.left.left = new TreeNode(3);
-//        root.left.right = new TreeNode(4);
-//        root.right.left = new TreeNode(4);
-//        root.right.right = new TreeNode(3);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(2);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(4);
+        root.right.left = new TreeNode(4);
+        root.right.right = new TreeNode(3);
         System.out.println(isSymmetric(root));
-        System.out.println(leftList);
-        System.out.println(rightList);
     }
 }
